@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1eb">
+  <meta name="description" content="Бегун или прыгун? 20 утверждений, чтобы присмотреться к своему темпу перемен. Татьяна Латкина, коуч и нейрокоуч.">
+  <title>Бегун или прыгун? · Татьяна Латкина</title>
+  <style>
+    :root { color-scheme: light; --paper:#f5f1eb; --white:#fffefa; --ink:#49362c; --muted:#736358; --accent:#a74732; --soft:#efd9d0; --line:#d9cec2; --green:#435d4c; --serif:Georgia,"Times New Roman",serif; }
+    * { box-sizing:border-box; }
+    [hidden] { display:none !important; }
+    html { scroll-behavior:smooth; scroll-padding-top:24px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    button,input,textarea { font:inherit; }
+    button,a,label { -webkit-tap-highlight-color:transparent; }
+    button { cursor:pointer; }
+    a { color:var(--accent); text-underline-offset:4px; }
+    button:focus-visible,a:focus-visible,summary:focus-visible,textarea:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
+    h1,h2,h3,p { margin:0; }
+    h1,h2,h3 { font-weight:400; }
+    button { touch-action:manipulation; }
+    .wrap { width:min(1120px,calc(100% - 72px)); margin-inline:auto; }
+    .site-header { display:flex; justify-content:space-between; align-items:center; gap:24px; padding-block:28px; border-bottom:1px solid var(--line); }
+    .signature { display:grid; gap:2px; }
+    .signature strong { font-size:17px; font-weight:500; letter-spacing:.02em; }
+    .signature span { font-size:14px; color:var(--muted); }
+    .header-note { color:var(--accent); font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
+    .eyebrow { font-size:14px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); }
+    .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:40px; padding:68px 0 64px; align-items:center; }
+    h1 { font:clamp(64px,7.5vw,108px)/.98 var(--serif); letter-spacing:-.055em; margin:22px 0 28px; }
+    h1 em { color:var(--accent); font-weight:400; }
+    .hero-question { max-width:580px; font:23px/1.5 var(--serif); }
+    .hero-aside { padding:30px 14px 12px 36px; }
+    .cover-art { display:block; width:100%; max-width:360px; margin:0 auto 30px; overflow:visible; }
+    .aside-question { font:italic 23px/1.45 var(--serif); max-width:335px; margin:0 auto; }
+    .aside-question + .aside-question { margin-top:14px; }
+    .facts { display:flex; gap:0; margin:34px 0 26px; }
+    .fact { padding:0 24px; border-left:1px solid var(--line); }
+    .fact:first-child { padding-left:0; border-left:0; }
+    .fact strong { display:block; font:32px/1.15 var(--serif); }
+    .fact span { font-size:14px; color:var(--muted); }
+    .button { display:inline-flex; justify-content:center; align-items:center; min-height:54px; padding:13px 26px; border:1px solid var(--ink); border-radius:6px; background:var(--ink); color:var(--white); font-size:16px; font-weight:500; line-height:1.45; text-decoration:none; transition:background .15s,border-color .15s; }
+    .button:hover { background:#62493a; border-color:#62493a; }
+    .button.secondary { background:transparent; color:var(--ink); border-color:var(--line); }
+    .button.secondary:hover { border-color:var(--ink); background:#fffefa88; }
+    .button.light { background:var(--white); color:var(--ink); border-color:var(--white); }
+    .small-note { font-size:14px; line-height:1.6; color:var(--muted); margin-top:15px; max-width:550px; }
+    .intro-bottom { display:grid; grid-template-columns:1fr 1fr; gap:64px; padding:38px 0 48px; border-top:1px solid var(--line); }
+    .intro-bottom h2 { font:29px/1.25 var(--serif); margin-bottom:18px; }
+    .intro-bottom ul { display:grid; grid-template-columns:1fr 1fr; gap:9px 24px; list-style:none; margin:0; padding:0; font-size:16px; color:var(--muted); }
+    .intro-bottom li::before { content:"·"; color:var(--accent); padding-right:10px; }
+    .intro-bottom p { color:var(--muted); font-size:16px; }
+    .intro-bottom p + p { margin-top:12px; }
+    .test-shell { max-width:800px; margin:42px auto 64px; }
+    .progress-meta { display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:14px; color:var(--muted); margin-bottom:12px; }
+    .progress-track { display:flex; gap:7px; height:4px; margin-bottom:32px; }
+    .progress-track span { display:block; flex:1; background:var(--line); border-radius:3px; overflow:hidden; }
+    .progress-track i { display:block; height:100%; background:var(--accent); transition:width .2s; }
+    .test-head h2 { font:clamp(29px,4.8vw,44px)/1.16 var(--serif); letter-spacing:-.02em; margin:12px 0 20px; overflow-wrap:anywhere; }
+    .scale-key { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 20px; padding-bottom:24px; color:var(--muted); font-size:14px; }
+    fieldset { min-width:0; border:0; padding:25px 0 28px; margin:0; border-top:1px solid var(--line); }
+    legend { float:left; width:100%; padding:0; font-size:18px; line-height:1.55; }
+    .question-number { display:block; color:var(--accent); font-size:14px; letter-spacing:.08em; margin-bottom:8px; }
+    .choices { clear:both; display:grid; grid-template-columns:repeat(5,1fr); gap:12px; max-width:420px; padding-top:19px; }
+    .choice { position:relative; cursor:pointer; }
+    .choice input { position:absolute; width:1px; height:1px; opacity:0; }
+    .choice span { display:flex; align-items:center; justify-content:center; min-height:54px; border:1px solid #b4a598; background:var(--white); border-radius:6px; font-size:20px; transition:background .15s,border-color .15s,color .15s; }
+    .choice:hover span { border-color:var(--accent); }
+    .choice input:checked + span { background:var(--accent); border-color:var(--accent); color:white; box-shadow:inset 0 0 0 2px var(--paper); }
+    .choice input:focus-visible + span { outline:3px solid var(--accent); outline-offset:4px; }
+    .invalid { border-top-color:var(--accent); }
+    .invalid legend { color:var(--accent); }
+    .test-nav { display:flex; gap:16px; justify-content:space-between; align-items:center; border-top:1px solid var(--line); padding-top:26px; }
+    .test-nav .button { min-width:140px; }
+    .form-error { color:var(--accent); font-size:16px; margin:0 0 18px; }
+    .test-note { text-align:center; margin-inline:auto; }
+    .result-shell { max-width:800px; margin:54px auto 64px; }
+    .result-hero { border-bottom:1px solid var(--line); padding-bottom:34px; }
+    .result-hero h2 { font:clamp(43px,6vw,66px)/1.1 var(--serif); letter-spacing:-.035em; margin:20px 0; overflow-wrap:anywhere; }
+    .result-hero h2 em { color:var(--accent); font-weight:400; }
+    .pace { display:inline-flex; border:1px solid #ac9988; border-radius:30px; padding:6px 15px; color:var(--muted); font-size:14px; margin-bottom:24px; }
+    .result-description { font-size:19px; line-height:1.7; }
+    .help-box { padding:28px 30px; margin:28px 0 34px; border-radius:6px; background:var(--soft); }
+    .help-box h3 { margin-bottom:12px; font-size:14px; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); }
+    .code-heading { font:30px/1.2 var(--serif); margin-bottom:18px; }
+    .code-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:28px; }
+    .code-cell { padding:18px 14px; border:1px solid var(--line); border-radius:6px; }
+    .code-letter { font:36px/1.15 var(--serif); color:var(--accent); }
+    .code-cell h3 { font-size:14px; line-height:1.4; margin:10px 0 5px; }
+    .code-cell p { font-size:14px; color:var(--muted); }
+    details { border-block:1px solid var(--line); margin-bottom:28px; }
+    summary { cursor:pointer; font-size:16px; padding:20px 0; }
+    summary::marker { color:var(--accent); }
+    .calculation { padding:14px 0 20px; border-top:1px solid var(--line); }
+    .calculation h3 { font-size:17px; font-weight:500; margin-bottom:8px; }
+    .calculation p { font-size:15px; margin-top:7px; }
+    .calculation .formula { color:var(--muted); }
+    .rules-table { width:100%; border-collapse:collapse; font-size:14px; margin:14px 0 22px; }
+    .rules-table th,.rules-table td { text-align:left; vertical-align:top; padding:12px 8px; border-top:1px solid var(--line); }
+    .rules-table th { font-weight:500; }
+    .rules-table .matched { background:var(--soft); }
+    .result-actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .copy-status { font-size:14px; color:var(--green); margin-top:12px; }
+    .copy-fallback { margin-top:18px; }
+    .copy-fallback label { display:block; font-size:14px; margin-bottom:8px; }
+    .copy-fallback textarea { width:100%; min-height:180px; border:1px solid var(--line); border-radius:5px; background:var(--white); color:var(--ink); padding:14px; font-size:16px; }
+    .consultation { margin-top:42px; padding:34px; background:var(--ink); border-radius:6px; color:var(--white); }
+    .consultation .eyebrow { color:#f0c2b0; }
+    .consultation h2 { font:clamp(32px,5vw,44px)/1.15 var(--serif); margin:16px 0; }
+    .consultation p { color:#f1e7df; font-size:16px; }
+    .consultation .button { margin-top:24px; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:20px; }
+    .contact-links a { color:#f1d0c0; font-size:14px; overflow-wrap:anywhere; }
+    .reset-link { display:block; border:0; background:transparent; color:var(--muted); padding:12px 0; margin-top:24px; font-size:14px; text-decoration:underline; text-underline-offset:4px; }
+    .site-footer { border-top:1px solid var(--line); padding:28px 0 36px; font-size:14px; color:var(--muted); }
+    .site-footer p + p { margin-top:12px; }
+    .site-footer a { color:var(--muted); }
+    .footer-sign { margin-top:22px; color:var(--ink); }
+    dialog { max-width:440px; width:calc(100% - 40px); border:1px solid var(--line); border-radius:10px; padding:30px; color:var(--ink); background:var(--white); }
+    dialog::backdrop { background:#241a15aa; }
+    dialog h2 { font:30px/1.2 var(--serif); margin-bottom:14px; }
+    dialog p { font-size:16px; }
+    .dialog-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+    .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+    noscript { display:block; padding:24px; background:var(--soft); }
+    @media (max-width:760px) {
+      .wrap { width:calc(100% - 40px); }
+      .site-header { padding-block:20px; gap:12px; }
+      .signature strong { font-size:16px; }
+      .signature span { font-size:13px; }
+      .header-note { font-size:12px; letter-spacing:.04em; text-align:right; max-width:75px; }
+      .hero { grid-template-columns:1fr; gap:34px; padding:40px 0 36px; }
+      h1 { font-size:clamp(59px,12.5vw,90px); margin:19px 0 24px; }
+      .hero-question { font-size:21px; }
+      .hero-aside { display:grid; grid-template-columns:100px 1fr; gap:0 22px; padding:0; align-items:center; }
+      .cover-art { grid-row:span 2; margin:0; width:100px; }
+      .aside-question { font-size:19px; margin:0; }
+      .aside-question + .aside-question { margin-top:10px; }
+      .facts { margin-top:28px; }
+      .fact { padding-inline:18px; }
+      .fact strong { font-size:29px; }
+      .hero .button { width:100%; }
+      .intro-bottom { grid-template-columns:1fr; gap:30px; padding-top:30px; }
+      .test-shell { margin:28px auto 44px; }
+      .test-head h2 { margin-top:10px; }
+      .progress-track { margin-bottom:26px; }
+      fieldset { padding:22px 0 25px; }
+      legend { font-size:17px; }
+      .choices { gap:10px; width:100%; max-width:none; }
+      .choice span { min-height:54px; }
+      .test-nav { gap:12px; }
+      .test-nav .button { min-width:0; }
+      .test-nav .button:last-child { flex:1; }
+      .result-shell { margin-top:36px; }
+      .result-hero h2 { font-size:clamp(32px,9vw,43px); }
+      .result-description { font-size:17px; }
+      .help-box { padding:22px; }
+      .code-grid { grid-template-columns:repeat(2,1fr); }
+      .result-actions .button { flex:1 1 200px; }
+      .consultation { padding:26px 22px; }
+      .consultation .button { width:100%; }
+      .contact-links { flex-direction:column; }
+      .rules-table th,.rules-table td { padding:11px 6px; }
+    }
+    @media (max-width:360px) {
+      .wrap { width:calc(100% - 32px); }
+      .fact { padding-inline:12px; }
+      .fact span { font-size:13px; }
+      .choices { gap:7px; }
+      .hero-aside { grid-template-columns:76px 1fr; gap:0 18px; }
+      .cover-art { width:76px; }
+      .button { padding-inline:18px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; animation:none !important; } }
+    @media print {
+      body { background:white; color:black; }
+      .site-header,.result-actions,.reset-link,.copy-status,.copy-fallback,dialog { display:none !important; }
+      .wrap { width:100%; }
+      .result-shell { margin:0 auto; }
+      .consultation,.help-box { break-inside:avoid; }
+      .consultation { color:black; background:white; border:1px solid #777; }
+      .consultation p,.consultation a,.consultation .eyebrow { color:black; }
+      .site-footer { margin-top:24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="signature"><strong>Татьяна Латкина</strong><span>коуч · нейрокоуч</span></div>
+      <span class="header-note">Тест · 5–10 минут</span>
+    </header>
+    <noscript>Для выбора ответов и автоматического подсчёта результата включите JavaScript в настройках браузера.</noscript>
+    <main id="main-content">
+      <section id="intro-view" aria-labelledby="intro-title">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">Ваш темп перемен</p>
+            <h1 id="intro-title">Бегун<br><em>или прыгун?</em></h1>
+            <p class="hero-question">Прежде чем начинать изменения, спросите себя: хочу ли я делать это на автопилоте — маленькими шагами, или хочу это почувствовать и стать другим человеком — прыжком?</p>
+            <div class="facts" aria-label="О тесте">
+              <div class="fact"><strong>20</strong><span>утверждений</span></div>
+              <div class="fact"><strong>4</strong><span>раздела</span></div>
+              <div class="fact"><strong>6</strong><span>типов</span></div>
+            </div>
+            <button class="button" id="start-button" type="button">Пройти тест</button>
+            <p class="small-note" id="intro-save-note">Отвечайте быстро, по первому ощущению. Ответы сохраняются только в этом браузере.</p>
+          </div>
+          <aside class="hero-aside" aria-label="Перед началом">
+            <svg class="cover-art" viewBox="0 0 360 330" fill="none" aria-hidden="true">
+              <path d="M42 292V157C42 88 98 32 167 32S292 88 292 157v135" stroke="#b5a596" stroke-width="1.3"/>
+              <circle cx="244" cy="126" r="66" fill="#d6a28e"/>
+              <path d="M18 292H342" stroke="#b5a596" stroke-width="1.3"/>
+              <path d="M65 292v-29h31v-29h31v-29h31v-29" stroke="#a74732" stroke-width="2"/>
+              <path d="M176 272c0-69 43-125 115-125" stroke="#49362c" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 8"/>
+              <circle cx="65" cy="263" r="4" fill="#a74732"/>
+              <circle cx="176" cy="272" r="4" fill="#49362c"/>
+            </svg>
+            <p class="aside-question">Есть ли у меня время на маленькие шаги?</p>
+            <p class="aside-question">И правильный ли маленький шаг я подобрал?</p>
+          </aside>
+        </div>
+        <div class="intro-bottom">
+          <section aria-labelledby="influences-title"><h2 id="influences-title">Что влияет на ответ</h2>
+            <ul><li>Реактивность нервной системы</li><li>Дофамин</li><li>Когнитивная гибкость</li><li>Реакции на стресс</li><li>Возраст</li><li>Генетика</li></ul>
+          </section>
+          <section aria-labelledby="how-title"><h2 id="how-title">Как устроен тест</h2>
+            <p>20 утверждений в 4 разделах. По каждому разделу вы получите букву — A, B или C, а по четырём буквам — свой тип и подходящий темп перемен.</p>
+            <p>Выберите одну цифру у каждого утверждения: 1 — совсем не про меня, 5 — это точно про меня. Подсчёт выполнится автоматически.</p>
+          </section>
+        </div>
+      </section>
+      <section id="test-view" class="test-shell" hidden aria-labelledby="section-title">
+        <div class="progress-meta"><span id="section-count"></span><span id="answer-count" aria-live="polite" aria-atomic="true"></span></div>
+        <div id="progress-bars" class="progress-track" aria-hidden="true"></div>
+        <header class="test-head">
+          <p class="eyebrow">Утверждения</p>
+          <h2 id="section-title" tabindex="-1"></h2>
+          <div class="scale-key" id="scale-key"><span>1 — совсем не про меня</span><span>5 — это точно про меня</span></div>
+        </header>
+        <form id="quiz-form" novalidate>
+          <div id="questions"></div>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <nav class="test-nav" aria-label="Переход между разделами">
+            <button class="button secondary" id="back-button" type="button">Назад</button>
+            <button class="button" id="next-button" type="submit">Далее</button>
+          </nav>
+        </form>
+        <p class="small-note test-note" id="test-save-note">Можно вернуться назад и изменить ответы. Они сохраняются только в этом браузере.</p>
+      </section>
+      <section id="result-view" class="result-shell" hidden aria-labelledby="result-title">
+        <div class="result-hero">
+          <p class="eyebrow">Ваш результат</p>
+          <h2 id="result-title" tabindex="-1"></h2>
+          <p class="pace" id="result-pace"></p>
+          <p class="result-description" id="result-description"></p>
+        </div>
+        <section class="help-box" aria-labelledby="help-title"><h3 id="help-title">Что поможет</h3><p id="result-help"></p></section>
+        <h3 class="code-heading">Ваш код</h3>
+        <div class="code-grid" id="result-code"></div>
+        <details id="calculation-details"><summary>Как получился результат</summary><div id="calculation-content"></div></details>
+        <div class="result-actions">
+          <button class="button" id="copy-button" type="button">Скопировать результат</button>
+          <button class="button secondary" id="edit-button" type="button">Изменить ответы</button>
+        </div>
+        <p class="copy-status" id="copy-status" role="status"></p>
+        <div class="copy-fallback" id="copy-fallback" hidden><label for="copy-text">Выделите и скопируйте результат:</label><textarea id="copy-text" readonly></textarea></div>
+        <section class="consultation" aria-labelledby="consultation-title">
+          <p class="eyebrow">Что дальше</p>
+          <h2 id="consultation-title">Разберём ваш результат</h2>
+          <p>Бесплатная встреча-знакомство до 30 минут, онлайн и без обязательств: посмотрим на ваш тип и подберём темп, в котором перемены не обернутся выгоранием.</p>
+          <a class="button light" href="https://t.me/LatkinaT_coach" target="_blank" rel="noopener noreferrer">Написать Татьяне в Telegram</a>
+          <div class="contact-links"><a href="https://wa.me/79123880522" target="_blank" rel="noopener noreferrer">WhatsApp · +7 912 388-05-22</a><a href="mailto:latkinatatiana2@gmail.com">latkinatatiana2@gmail.com</a></div>
+        </section>
+        <button class="reset-link" id="reset-button" type="button">Пройти тест заново</button>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Тест — инструмент самонаблюдения, а не медицинская или психологическая диагностика.</p>
+      <p>Тест из презентации <a href="https://annaobukhova.ru/bigchange" target="_blank" rel="noopener noreferrer">Анны Обуховой</a> по вебинару «Бегуны и прыгуны: как справляться с изменениями».</p>
+      <p class="footer-sign">Татьяна Латкина · коуч · нейрокоуч</p>
+    </footer>
+  </div>
+  <dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description">
+    <h2 id="reset-title">Начать заново?</h2>
+    <p id="reset-description">Ваши ответы и результат будут удалены из этого браузера. Можно будет пройти тест ещё раз.</p>
+    <div class="dialog-actions"><button class="button secondary" id="cancel-reset" type="button" autofocus>Отмена</button><button class="button" id="confirm-reset" type="button">Начать заново</button></div>
+  </dialog>
+  <script id="quiz-data" type="application/json">
+  {
+    "sections":[
+      {"title":"Реактивность амигдалы","short":"Реакция на стресс","meanings":{"A":"высокая","B":"низкая","C":"средняя"},"questions":[
+        "В неожиданной или рискованной ситуации я чувствую сильное сердцебиение, потливость, напряжение в теле.",
+        "После стрессового события мне нужно несколько часов (или дней), чтобы полностью успокоиться.",
+        "Я часто избегаю ситуаций, которые могут пойти не так, потому что переживаю о последствиях.",
+        "Мне трудно принимать решения, когда есть неопределённость.",
+        "Даже позитивные изменения (свадьба, переезд) вызывают у меня тревогу."
+      ]},
+      {"title":"Дофаминовая регуляция","short":"Рутина или новизна","meanings":{"A":"стабильность","B":"новизна","C":"баланс"},"questions":[
+        "Мне легко следовать расписанию и рутине, я не испытываю скуки от повторяющихся действий.",
+        "Я хорошо удерживаю в голове несколько дел одновременно и довожу их до конца.",
+        "Меня часто тянет к новым впечатлениям, смене деятельности, риску.",
+        "Мне быстро надоедает делать одно и то же, я теряю интерес к цели, если нет новизны.",
+        "Я часто действую импульсивно, под влиянием момента."
+      ]},
+      {"title":"Когнитивная гибкость и толерантность к неопределённости","short":"Гибкость","meanings":{"A":"низкая","B":"высокая","C":"баланс"},"questions":[
+        "Я легко переключаюсь с одного дела на другое, не испытывая дискомфорта.",
+        "В новой ситуации я быстро нахожу нестандартные решения.",
+        "Я спокойно отношусь к тому, что исход событий нельзя предсказать на 100%.",
+        "Мне комфортнее, когда всё идёт по плану, и я нервничаю при изменениях.",
+        "Я предпочитаю сначала детально всё продумать, а потом действовать."
+      ]},
+      {"title":"HPA-ось и восстановление после стресса","short":"Восстановление","meanings":{"A":"долгое","B":"быстрое","C":"баланс"},"questions":[
+        "После интенсивного периода (сессия, дедлайн) я быстро восстанавливаю силы за 1–2 дня.",
+        "Даже если случился провал, я способен на следующий день начать заново без «эмоционального похмелья».",
+        "Стресс меня мобилизует, я работаю лучше в условиях давления.",
+        "Если что-то идёт не по плану, я долго прокручиваю это в голове и не могу отпустить.",
+        "Хронический стресс приводит к бессоннице, упадку сил, забывчивости."
+      ]}
+    ],
+    "types":{
+      "anxious":{"number":"1.1","noun":"Бегун","adjective":"тревожный","pace":"Маленькие шаги","description":"Ваша нервная система ярко реагирует на стресс и долго восстанавливается, а опору вы находите в стабильности и плане. Резкие перемены для вас — перегрузка, зато маленькие регулярные шаги работают надёжно: они не включают тревогу и со временем становятся автопилотом.","help":"Одно небольшое действие в день, понятный план и заранее продуманные запасные варианты. Не ускоряйтесь, даже когда хочется."},
+      "flexible":{"number":"1.2","noun":"Бегун","adjective":"гибкий","pace":"Маленькие шаги","description":"На стресс вы реагируете умеренно, любите стабильность и при этом легко подстраиваетесь под обстоятельства. Ваш путь — последовательные шаги в своём темпе: маршрут можно корректировать, не теряя опоры.","help":"Регулярная практика плюс короткая сверка раз в неделю: что сработало, что поменять."},
+      "adaptive":{"number":"2.1","noun":"Прыгун","adjective":"адаптивный","pace":"Большие шаги","description":"Стресс вас скорее мобилизует, восстанавливаетесь вы быстро, новизна заряжает, а неопределённость не пугает. Большие решительные шаги — ваш способ меняться: вам важно почувствовать перемену и стать другим человеком.","help":"Смелая цель и интенсивный старт. Чтобы прыжок закрепился, добавьте пару опорных привычек."},
+      "impulsive":{"number":"2.2","noun":"Прыгун","adjective":"импульсивный","pace":"Большие шаги","description":"Вас тянет к новому, и вы легко решаетесь на перемены, но после сильного напряжения восстанавливаетесь долго. Рывок даёт энергию, а откат после него может её забрать.","help":"Большие шаги — но с планом восстановления: заложите паузы, сон и поддержку и не начинайте несколько перемен сразу."},
+      "spherical":{"number":"3.1","noun":"Гибрид","adjective":"сферный","pace":"Свой темп в каждой сфере","description":"Ваши ответы не складываются в один чистый тип: в чём-то вы бегун, в чём-то прыгун. Скорее всего, в одних сферах жизни вам подходят маленькие шаги, а в других — прыжки.","help":"Подбирайте темп под сферу: где важна стабильность — маленькие шаги, где нужна энергия новизны — смелые решения."},
+      "sensitive":{"number":"3.2","noun":"Гибрид","adjective":"чувствительный","pace":"Свой темп и бережность","description":"Ваша нервная система чутко реагирует на стресс, а остальные ответы смешанные: иногда хочется прыжка, но тело включает тревогу. Меняться можно в любом темпе — важно беречь ресурс.","help":"Начинайте с маленьких шагов и бережного восстановления, а прыжки делайте там, где чувствуете опору."}
+    }
+  }
+  </script>
+  <script>
+  'use strict';
+  const quizData = JSON.parse(document.getElementById('quiz-data').textContent);
+
+  // Integer comparisons preserve the exact thresholds and tie rules in the PDF.
+  function scoreSection(index, values) {
+    if (!Number.isInteger(index) || index < 0 || index > 3 || !Array.isArray(values) || values.length !== 5 || !values.every(value => Number.isInteger(value) && value >= 1 && value <= 5)) {
+      throw new Error('Для подсчёта нужны пять ответов от 1 до 5.');
+    }
+    if (index === 0) {
+      const total = values.reduce((sum, value) => sum + value, 0);
+      return { letter: total < 10 ? 'B' : total <= 15 ? 'C' : 'A', total };
+    }
+    const split = index === 1 ? 2 : 3;
+    const x = values.slice(0, split).reduce((sum, value) => sum + value, 0);
+    const y = values.slice(split).reduce((sum, value) => sum + value, 0);
+    const left = (index === 1 ? 3 : 2) * x;
+    const right = (index === 1 ? 2 : 3) * y;
+    const letter = left === right ? 'C' : index === 1 ? (left > right ? 'A' : 'B') : (left > right ? 'B' : 'A');
+    return { letter, x, y, left, right };
+  }
+
+  function classifyCode(code) {
+    if (typeof code !== 'string' || !/^[ABC]{4}$/.test(code)) throw new Error('Код должен состоять из четырёх букв A, B или C.');
+    if (code === 'AAAA') return 'anxious';
+    if (/^CAB[AB]$/.test(code)) return 'flexible';
+    if (code === 'BBBB') return 'adaptive';
+    if (/^[BC]BBA$/.test(code)) return 'impulsive';
+    if (code[0] === 'A') return 'sensitive';
+    return 'spherical';
+  }
+
+  function evaluateAnswers(answers) {
+    if (!Array.isArray(answers) || answers.length !== 20) throw new Error('Ответьте на все 20 утверждений.');
+    const sections = quizData.sections.map((_, index) => scoreSection(index, answers.slice(index * 5, index * 5 + 5)));
+    const code = sections.map(section => section.letter).join('');
+    const typeId = classifyCode(code);
+    return { sections, code, typeId, type: quizData.types[typeId] };
+  }
+
+  const storageKey = 'latkina-begun-ili-prygun-v1';
+  let storageAvailable = true;
+  let state = { answers: Array(20).fill(null), page: 0, view: 'intro' };
+  try {
+    const raw = localStorage.getItem(storageKey);
+    let saved = null;
+    try { saved = raw ? JSON.parse(raw) : null; } catch (_) { /* Recover an unreadable older save without losing storage support. */ }
+    if (saved && Array.isArray(saved.answers) && saved.answers.length === 20) {
+      state.answers = saved.answers.map(value => Number.isInteger(value) && value >= 1 && value <= 5 ? value : null);
+      state.page = Number.isInteger(saved.page) && saved.page >= 0 && saved.page < 4 ? saved.page : 0;
+      state.view = ['intro', 'test', 'result'].includes(saved.view) ? saved.view : 'intro';
+      if (state.view === 'result' && state.answers.some(value => value === null)) state.view = 'test';
+    }
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  } catch (_) { storageAvailable = false; }
+
+  const byId = id => document.getElementById(id);
+  const countAnswers = () => state.answers.filter(value => value !== null).length;
+
+  function updateStorageNote() {
+    byId('intro-save-note').textContent = 'Отвечайте быстро, по первому ощущению. ' + (storageAvailable ? 'Ответы сохраняются только в этом браузере.' : 'Ответы сохраняются, пока открыта эта страница.');
+    byId('test-save-note').textContent = 'Можно вернуться назад и изменить ответы. ' + (storageAvailable ? 'Они сохраняются только в этом браузере.' : 'Они сохраняются, пока открыта эта страница.');
+  }
+
+  function saveState() {
+    if (!storageAvailable) return;
+    try { localStorage.setItem(storageKey, JSON.stringify(state)); }
+    catch (_) { storageAvailable = false; updateStorageNote(); }
+  }
+
+  function focusHeading(id) {
+    const heading = byId(id);
+    heading.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  function setView(view, focus = true) {
+    state.view = view;
+    ['intro', 'test', 'result'].forEach(name => { byId(name + '-view').hidden = name !== view; });
+    if (view === 'intro') {
+      byId('start-button').textContent = countAnswers() ? 'Продолжить тест' : 'Пройти тест';
+      if (focus) { byId('start-button').focus({ preventScroll:true }); window.scrollTo({ top:0, behavior:'instant' }); }
+    }
+    if (view === 'test') { renderSection(); if (focus) focusHeading('section-title'); }
+    if (view === 'result') { renderResult(); if (focus) focusHeading('result-title'); }
+    saveState();
+  }
+
+  function updateProgress() {
+    byId('section-count').textContent = 'Раздел ' + (state.page + 1) + ' из 4';
+    byId('answer-count').textContent = 'Ответы: ' + countAnswers() + ' из 20';
+    byId('progress-bars').replaceChildren(...quizData.sections.map((_, index) => {
+      const segment = document.createElement('span');
+      const fill = document.createElement('i');
+      fill.style.width = (state.answers.slice(index * 5, index * 5 + 5).filter(value => value !== null).length * 20) + '%';
+      segment.append(fill); return segment;
+    }));
+  }
+
+  function renderSection() {
+    const section = quizData.sections[state.page];
+    byId('section-title').textContent = section.title;
+    byId('next-button').textContent = state.page === 3 ? 'Узнать результат' : 'Далее';
+    byId('back-button').textContent = state.page === 0 ? 'К началу' : 'Назад';
+    byId('form-error').hidden = true;
+    byId('form-error').textContent = '';
+    byId('questions').replaceChildren(...section.questions.map((question, index) => {
+      const questionIndex = state.page * 5 + index;
+      const number = (state.page + 1) + '.' + (index + 1);
+      const fieldset = document.createElement('fieldset');
+      fieldset.id = 'question-' + questionIndex;
+      fieldset.setAttribute('aria-describedby', 'scale-key');
+      const legend = document.createElement('legend');
+      const labelNumber = document.createElement('span');
+      labelNumber.className = 'question-number'; labelNumber.textContent = number;
+      legend.append(labelNumber, document.createTextNode(question));
+      const choices = document.createElement('div'); choices.className = 'choices';
+      for (let value = 1; value <= 5; value++) {
+        const label = document.createElement('label'); label.className = 'choice';
+        const input = document.createElement('input');
+        input.type = 'radio'; input.name = 'q' + questionIndex; input.value = String(value);
+        input.required = true; input.checked = state.answers[questionIndex] === value;
+        input.setAttribute('aria-label', value === 1 ? '1 — совсем не про меня' : value === 5 ? '5 — это точно про меня' : String(value) + ' из 5');
+        input.addEventListener('change', () => {
+          state.answers[questionIndex] = value;
+          fieldset.classList.remove('invalid'); fieldset.removeAttribute('aria-invalid');
+          fieldset.querySelectorAll('input').forEach(item => item.removeAttribute('aria-invalid'));
+          fieldset.setAttribute('aria-describedby', 'scale-key');
+          const remaining = state.answers.slice(state.page * 5, state.page * 5 + 5).filter(answer => answer === null).length;
+          if (!byId('form-error').hidden) {
+            byId('form-error').textContent = remaining ? 'Ответьте на все утверждения в этом разделе. Осталось: ' + remaining + '.' : '';
+            byId('form-error').hidden = remaining === 0;
+          }
+          updateProgress(); saveState();
+        });
+        const digit = document.createElement('span'); digit.textContent = String(value); digit.setAttribute('aria-hidden', 'true');
+        label.append(input, digit); choices.append(label);
+      }
+      fieldset.append(legend, choices); return fieldset;
+    }));
+    updateProgress();
+  }
+
+  function renderResult() {
+    const result = evaluateAnswers(state.answers);
+    const title = byId('result-title');
+    const adjective = document.createElement('em'); adjective.textContent = result.type.adjective;
+    title.replaceChildren(document.createTextNode(result.type.noun + ' '), adjective);
+    byId('result-pace').textContent = result.type.pace;
+    byId('result-description').textContent = result.type.description;
+    byId('result-help').textContent = result.type.help;
+    byId('result-code').replaceChildren(...result.sections.map((score, index) => {
+      const cell = document.createElement('div'); cell.className = 'code-cell';
+      const letter = document.createElement('div'); letter.className = 'code-letter'; letter.textContent = score.letter;
+      const heading = document.createElement('h3'); heading.textContent = quizData.sections[index].short;
+      const meaning = document.createElement('p'); meaning.textContent = quizData.sections[index].meanings[score.letter];
+      cell.append(letter, heading, meaning); return cell;
+    }));
+    renderCalculations(result);
+    byId('copy-status').textContent = '';
+    byId('copy-fallback').hidden = true;
+    byId('calculation-details').open = false;
+  }
+
+  function addParagraph(parent, text, className) {
+    const paragraph = document.createElement('p'); paragraph.textContent = text;
+    if (className) paragraph.className = className;
+    parent.append(paragraph);
+  }
+
+  function renderCalculations(result) {
+    const container = byId('calculation-content'); container.replaceChildren();
+    result.sections.forEach((score, index) => {
+      const block = document.createElement('section'); block.className = 'calculation';
+      const heading = document.createElement('h3'); heading.textContent = (index + 1) + '. ' + quizData.sections[index].title; block.append(heading);
+      addParagraph(block, 'Ваши ответы: ' + state.answers.slice(index * 5, index * 5 + 5).join(', ') + '.');
+      if (index === 0) {
+        addParagraph(block, 'Сумма: ' + score.total + '. Буква: ' + score.letter + '.');
+        addParagraph(block, 'Меньше 10 → B · от 10 до 15 → C · больше 15 → A', 'formula');
+      } else {
+        const sectionNumber = index + 1;
+        const split = index === 1 ? 2 : 3;
+        const xTerms = Array.from({ length: split }, (_, i) => sectionNumber + '.' + (i + 1)).join(' + ');
+        const yTerms = Array.from({ length: 5 - split }, (_, i) => sectionNumber + '.' + (split + i + 1)).join(' + ');
+        addParagraph(block, 'X = ' + xTerms + ' = ' + score.x + '. Y = ' + yTerms + ' = ' + score.y + '.');
+        const leftMultiplier = index === 1 ? 3 : 2;
+        const rightMultiplier = index === 1 ? 2 : 3;
+        addParagraph(block, leftMultiplier + ' × X = ' + score.left + '; ' + rightMultiplier + ' × Y = ' + score.right + '. Буква: ' + score.letter + '.');
+        addParagraph(block, index === 1 ? '3 × X больше, чем 2 × Y → A · меньше → B · поровну → C' : '2 × X больше, чем 3 × Y → B · меньше → A · поровну → C', 'formula');
+      }
+      container.append(block);
+    });
+    addParagraph(container, 'Ваш код: ' + result.code.split('').join(' ') + '. Тип определяется по правилам ниже; проверка идёт сверху вниз.');
+    const rules = [
+      ['anxious', 'A A A A'],
+      ['flexible', 'C A B, в разделе 4 — A или B'],
+      ['adaptive', 'B B B B'],
+      ['impulsive', 'B или C, затем B B A'],
+      ['sensitive', 'В разделе 1 — A, код не совпал с типами выше'],
+      ['spherical', 'Любой другой код']
+    ];
+    const table = document.createElement('table'); table.className = 'rules-table';
+    const caption = document.createElement('caption'); caption.className = 'sr-only'; caption.textContent = 'Правила определения типа по четырём буквам'; table.append(caption);
+    const head = document.createElement('thead'); const headRow = document.createElement('tr');
+    ['Тип', 'Код'].forEach(text => { const th = document.createElement('th'); th.scope = 'col'; th.textContent = text; headRow.append(th); }); head.append(headRow); table.append(head);
+    const body = document.createElement('tbody');
+    rules.forEach(([typeId, rule]) => {
+      const row = document.createElement('tr'); if (typeId === result.typeId) row.className = 'matched';
+      const name = document.createElement('th'); name.scope = 'row'; name.textContent = quizData.types[typeId].noun + ' ' + quizData.types[typeId].adjective;
+      const code = document.createElement('td'); code.textContent = rule; row.append(name, code); body.append(row);
+    });
+    table.append(body); container.append(table);
+  }
+
+  function resultText() {
+    const result = evaluateAnswers(state.answers);
+    return 'Тест «Бегун или прыгун?»\n\n' + result.type.noun + ' ' + result.type.adjective + '\n' + result.type.pace + '\nКод: ' + result.code.split('').join(' ') + '\n\n' + result.type.description + '\n\nЧто поможет\n' + result.type.help + '\n\nТест — инструмент самонаблюдения, а не медицинская или психологическая диагностика.\nТест из презентации Анны Обуховой по вебинару «Бегуны и прыгуны: как справляться с изменениями».\nhttps://annaobukhova.ru/bigchange\n\nТатьяна Латкина · коуч · нейрокоуч\nTelegram: @LatkinaT_coach';
+  }
+
+  byId('start-button').addEventListener('click', () => setView('test'));
+  byId('back-button').addEventListener('click', () => {
+    if (state.page === 0) setView('intro');
+    else { state.page -= 1; setView('test'); }
+  });
+  byId('quiz-form').addEventListener('submit', event => {
+    event.preventDefault();
+    const missing = state.answers.slice(state.page * 5, state.page * 5 + 5).map((value, index) => value === null ? state.page * 5 + index : -1).filter(index => index !== -1);
+    if (missing.length) {
+      byId('form-error').textContent = 'Ответьте на все утверждения в этом разделе. Осталось: ' + missing.length + '.';
+      byId('form-error').hidden = false;
+      missing.forEach(index => {
+        const fieldset = byId('question-' + index); fieldset.classList.add('invalid');
+        fieldset.setAttribute('aria-invalid', 'true'); fieldset.setAttribute('aria-describedby', 'scale-key form-error');
+        fieldset.querySelectorAll('input').forEach(input => input.setAttribute('aria-invalid', 'true'));
+      });
+      const firstQuestion = byId('question-' + missing[0]);
+      firstQuestion.querySelector('input').focus({ preventScroll:true });
+      firstQuestion.scrollIntoView({ block:'center', behavior:'smooth' });
+      return;
+    }
+    if (state.page < 3) { state.page += 1; setView('test'); }
+    else {
+      const firstMissing = state.answers.indexOf(null);
+      if (firstMissing !== -1) { state.page = Math.floor(firstMissing / 5); setView('test'); }
+      else setView('result');
+    }
+  });
+  byId('edit-button').addEventListener('click', () => { state.page = 0; setView('test'); });
+  byId('copy-button').addEventListener('click', async () => {
+    const text = resultText();
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(text);
+      byId('copy-status').textContent = 'Результат скопирован. Можно сохранить его в заметки или отправить в Telegram.';
+      byId('copy-fallback').hidden = true;
+    } catch (_) {
+      byId('copy-text').value = text; byId('copy-fallback').hidden = false;
+      byId('copy-text').focus(); byId('copy-text').select();
+      byId('copy-status').textContent = 'Автоматическое копирование недоступно. Скопируйте выделенный текст.';
+    }
+  });
+  byId('reset-button').addEventListener('click', () => byId('reset-dialog').showModal());
+  byId('cancel-reset').addEventListener('click', () => byId('reset-dialog').close());
+  byId('confirm-reset').addEventListener('click', () => {
+    byId('reset-dialog').close();
+    state = { answers:Array(20).fill(null), page:0, view:'test' }; setView('test');
+  });
+  updateStorageNote();
+  setView(state.view, false);
+  </script>
+</body>
+</html>
